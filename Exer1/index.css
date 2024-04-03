@@ -1,0 +1,39 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-image: url("./assets/bg.jpg");
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: rgb(63, 165, 42);
+    text-shadow: 2px 1px 5px #ffffff57;
+}
+
+.card {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    border: none;
+    margin-bottom: 10%;
+}
+
+.bg-custom-1 {
+    background-color: rgb(253, 245, 231)!important;
+}
+
+.card-input {
+    display: flex;
+    margin-bottom: 10%;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}

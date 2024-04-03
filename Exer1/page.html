@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- As a heading -->
+  <nav class="navbar bg-body-tertiary shadow p-3 mb-5 ">
+    <div class="container-fluid">
+      <span class="navbar-brand mx-auto mb-0 h1">
+        <div class="title">
+          <h1>Contato</h1>
+        </div>
+      </span>
+    </div>
+  </nav>
+
+  
+  <div class="card bg-custom-1 shadow p-3 border-none">
+    <div class="title">
+      <h2>Insira dados iniciais para envio</h2>
+    </div>
+    <div class="card-body">
+      <label for="nome">Seu nome:</label>
+      <div class="card-input">
+        <input type="text"  class="form-control" id="nome" />
+      </div>
+      <label for="mensagem">Observações:</label>
+      <div class="card-input">
+        <textarea type="text"  class="form-control" id="mensagem"></textarea>
+      </div>
+      <div class="card-button mb-5">
+        <button onclick="conferirMensagemWhatsApp()" class="btn btn-secondary">Conferir Mensagem</button>
+      </div>
+      <div class="card-content">
+        <p>Nome: <span id="confNome"></span></p>
+        <p>Observações: <span id="confMsg"></span></p>
+        <p>Data: <span id="confDate"></span></p>
+
+        <button onclick="enviar()" class="btn btn-success mt-5" >Enviar Mensagem</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var nomeGlobal;
+    var mensagemGlobal;
+    var dateGlobal;
+
+    function conferirMensagemWhatsApp() {
+      var nome = document.getElementById("nome").value;
+      var mensagem = document.getElementById("mensagem").value;
+      var date = new Date();
+      const dia = date.getDay
+      const mes = date.getMonth
+      const ano = date.getFullYear
+
+      nomeGlobal = nome;
+      mensagemGlobal = mensagem;
+      dateGlobal = date;
+
+      document.getElementById("confNome").textContent = nome;
+      document.getElementById("confMsg").textContent = mensagem;
+      document.getElementById("confDate").textContent = date.toLocaleString("pt-BR");
+    }
+
+    function enviar() {
+      var numeroTelefone = "5541999999999";
+
+      var linkWhatsApp =
+        "https://wa.me/" +
+        numeroTelefone +
+        "?text=NOME DO RECEPTOR(A): " +
+        nomeGlobal +
+        " - " +
+        mensagemGlobal +
+        " - " +
+        dateGlobal;
+
+      window.open(linkWhatsApp);
+    }
+  </script>
+</body>
+</html>
