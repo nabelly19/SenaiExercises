@@ -1,0 +1,53 @@
+.cardPage{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    color: black;
+}
+
+.cardImage{
+    border-radius: 5%;
+}
+
+.cardTitle {
+    display: flex;
+    font-weight: bold;
+    padding: 15%;
+}
+
+.cardText{
+    padding: 15%;
+}
+
+.cardValue{
+    color: darkgreen;
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+.cardStats{
+    background-color: rgb(43, 255, 0);
+    display: flex;
+    justify-content: end;
+    margin-left: 70%;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+
+.cardStats{
+    background-color: red;
+    display: flex;
+    justify-content: end;
+    margin-left: 70%;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
