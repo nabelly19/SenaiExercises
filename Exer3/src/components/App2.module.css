@@ -1,0 +1,40 @@
+.cardPage{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: rgb(138, 138, 138);
+    border-radius: 5%;
+    color: rgb(228, 228, 228);
+}
+
+.cardImage{
+    border-radius: 5%;
+}
+
+.cardTitle {
+    display: flex;
+    font-weight: bold;
+    font-size: larger;
+    padding: 5%;
+}
+
+.cardText{
+    padding: 5%;
+    display: flex;
+}
+
+.cardValue{
+    color: rgb(19, 150, 190);
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.btn {
+    height: 150px;
+}
+

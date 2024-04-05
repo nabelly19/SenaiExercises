@@ -28,9 +28,22 @@
   margin-left:7%;
 }
 
+.wrapCard2 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  align-items: center;
+  gap: 1vh;
+  margin-left:3%;
+}
+
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgb(255, 196, 0);
+}
+
+.leaflet-bottom .leaflet-right {
+  display: none;
 }
